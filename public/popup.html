@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LaTeXify OCR</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div id="popup-container">
+        <!-- Logo -->
+        <img src="icons/border-48.png" id="extension-logo" alt="Extension Logo">
+
+        <!-- Engine Selector -->
+        <div id="engine-selector">
+            <label><input type="radio" name="engine" value="mathpix"> Mathpix OCR</label>
+            <label><input type="radio" name="engine" value="llm"> LLM OCR</label>
+        </div>
+
+        <!-- LaTeX Display Area -->
+        <div id="latex-display-area">
+            No equation detected.
+        </div>
+
+        <!-- Copy to Clipboard Button -->
+        <button id="copy-to-clipboard">Copy to Clipboard</button>
+
+        <!-- Status -->
+        <div id="status-line">Status: Idle</div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

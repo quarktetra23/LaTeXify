@@ -1,0 +1,19 @@
+/* content-style.css */
+
+#latexify-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.15);
+    cursor: crosshair;
+    z-index: 9999999;
+}
+
+#latexify-selection {
+    position: absolute;
+    border: 2px dashed #4CAF50;
+    background: rgba(76, 175, 80, 0.2);
+    z-index: 99999999;
+}
