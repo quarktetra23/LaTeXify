@@ -58,7 +58,7 @@ chrome.commands.onCommand.addListener((command) => {
 });
 
 async function callLLMAPI(imageBase64) {
-    const OPENAI_API_KEY = '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';  // <== Your real API key here
+    const OPENAI_API_KEY = 'sk-xxxxxxx';  // <== Your real API key here
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
