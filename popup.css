@@ -10,16 +10,6 @@
   margin-bottom: 15px;
 }
 
-#engine-selector {
-  margin-bottom: 15px;
-}
-
-#engine-selector label {
-  display: block;
-  margin: 5px 0;
-  cursor: pointer;
-}
-
 #latex-display-area {
   border: 1px solid #ccc;
   padding: 10px;
@@ -29,7 +19,8 @@
   background-color: #f9f9f9;
   font-family: monospace;
   font-size: 14px;
-  white-space: pre-wrap;
+  white-space: pre-line;
+  word-break: break-word;
 }
 
 #copy-to-clipboard {
