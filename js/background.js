@@ -2,7 +2,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     if (message.type === 'SCREENSHOT_REQUEST') {
         console.log('[Background] Screenshot request received');
 
-        // Step 1: Start screenshot
+        // Step 1: Screenshot
         chrome.storage.local.set({ lastStatus: 'Capturing screenshot...' });
 
         try {
