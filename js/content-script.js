@@ -20,10 +20,11 @@ function startSelection() {
     overlay.id = 'latexify-overlay';
     document.body.appendChild(overlay);
 
-    overlay.addEventListener('mousedown', onMouseDown);
-    overlay.addEventListener('mousemove', onMouseMove);
-    overlay.addEventListener('mouseup', onMouseUp);
-    window.addEventListener('keydown', onKeyDown); // add ESC support
+    // Now listen on window to capture all mouse events reliably:
+    window.addEventListener('mousedown', onMouseDown);
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+    window.addEventListener('keydown', onKeyDown);
 }
 
 function stopSelection() {
@@ -35,7 +36,10 @@ function stopSelection() {
         selectionBox.remove();
         selectionBox = null;
     }
-    window.removeEventListener('keydown', onKeyDown); // cleanup
+    window.removeEventListener('mousedown', onMouseDown);
+    window.removeEventListener('mousemove', onMouseMove);
+    window.removeEventListener('mouseup', onMouseUp);
+    window.removeEventListener('keydown', onKeyDown);
     isSelecting = false;
 }
 
@@ -76,7 +80,6 @@ function onMouseUp(e) {
 
     console.log('[Content Script] Selection rectangle:', rect);
 
-    // Clean up overlay and selection box
     stopSelection();
 
     // Send selection to background
@@ -96,7 +99,6 @@ function getSelectionRect(x1, y1, x2, y2) {
     return { x, y, width, height };
 }
 
-// Handle Escape key → cancel selection
 function onKeyDown(e) {
     if (e.key === 'Escape') {
         console.log('[Content Script] ESC pressed → cancelling selection');
