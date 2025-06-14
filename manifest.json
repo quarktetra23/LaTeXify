@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "LaTeXify OCR",
+  "name": "LaTeXify",
   "version": "1.0",
   "description": "Screenshot math equations and convert to LaTeX.",
   "permissions": [
