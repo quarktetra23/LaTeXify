@@ -1,11 +1,16 @@
-// background.js
-
 chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
     if (message.type === 'SCREENSHOT_REQUEST') {
         console.log('[Background] Screenshot request received');
+
+        // Step 1: Start screenshot
+        chrome.storage.local.set({ lastStatus: 'Capturing screenshot...' });
+
         try {
             const imageUri = await chrome.tabs.captureVisibleTab(sender.tab.windowId, { format: 'png' });
             console.log('[Background] Screenshot captured');
+
+            // Step 2: Cropping
+            chrome.storage.local.set({ lastStatus: 'Cropping image...' });
 
             const scale = await getDevicePixelRatio(sender.tab.id);
             const scaledSelection = {
@@ -19,6 +24,9 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
             const croppedImageBase64 = await cropImage(imageUri, scaledSelection);
             console.log('[Background] Cropped image ready');
 
+            // Step 3: Sending to OpenAI
+            chrome.storage.local.set({ lastStatus: 'Sending to OpenAI...' });
+
             let latexResult = '';
             let status = '';
 
@@ -31,6 +39,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
                 status = 'API call failed';
             }
 
+            // Step 4: Save result and final status
             chrome.storage.local.set({
                 lastLatexResult: latexResult,
                 lastStatus: status
@@ -41,6 +50,7 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
             sendResponse({ success: true });
         } catch (err) {
             console.error('[Background] Screenshot failed:', err);
+            chrome.storage.local.set({ lastStatus: 'Screenshot failed' });
             sendResponse({ success: false, error: err.message });
         }
 
@@ -58,7 +68,7 @@ chrome.commands.onCommand.addListener((command) => {
 });
 
 async function callLLMAPI(imageBase64) {
-    const OPENAI_API_KEY = 'sk-xxxxxxx';  // <== Your real API key here
+    const OPENAI_API_KEY = 'sk-proj-xxx...'; // Replace with your real API key
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
