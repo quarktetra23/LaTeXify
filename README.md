@@ -1,4 +1,3 @@
-**Project README**
 
 **Overview**\
 This project centers around the development of "LaTeXify", a browser extension designed to enhance the workflow of LaTeX users. The primary function of LaTeXify is to allow for the selection of web content and its subsequent conversion into LaTeX format. This tool is tailored to assist a wide range of users, from students and academics to professionals, in seamlessly integrating web content into LaTeX documents.
