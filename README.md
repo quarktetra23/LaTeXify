@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="404" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
+  <img width="202" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
 </p>
 
 <h1 align="center">LaTeXify</h1>
@@ -19,12 +19,12 @@ I plan to support Safari too, as its extension model is now more aligned with Ch
 
 ## Motivation
 
-Typing equations in LaTeX can be time-consuming—especially when minor syntax errors prevent compilation. LaTeX isn’t always beginner-friendly either. Instead of switching tabs or Googling syntax, this extension helps save time by generating LaTeX within moments.
+Typing equations in LaTeX can be time-consuming—especially when minor syntax errors prevent compilation. LaTeX isn’t always beginner-friendly either. Instead of switching tabs or looking for/genertaing syntax, this extension helps save time by generating LaTeX within moments.
 
 As an undergrad who’s spent hours writing equations in Overleaf, this tool is something I always wished existed.
 
 <p align="center">
-  <img width="339" alt="Screenshot 2025-06-17 at 11 59 15" src="https://github.com/user-attachments/assets/60082085-d6c3-4384-b824-acdcfa3db3f4" />
+  <img width="330" alt="Screenshot 2025-06-17 at 11 59 15" src="https://github.com/user-attachments/assets/60082085-d6c3-4384-b824-acdcfa3db3f4" />
 </p>
 
 ---
@@ -44,7 +44,6 @@ async function callLLMAPI(imageBase64) {
 }
 ```
 
-
 For Chrome: 
 1. Visit chrome://extensions/ and enable developer mode
 2. Click “Load unpacked”
@@ -55,6 +54,20 @@ For Firefox:
 2. Vist bout:debugging#/runtime/this-firefox
 3.  Click "Load Temporary Add-on"
 4.   Select **just** your manifest.json the local LaTeXify-main folder
+
+<p align="center">
+  <img width="1440" alt="Screenshot 2025-06-17 at 12 18 27" src="https://github.com/user-attachments/assets/598cf03c-0cba-4d0a-97f9-ce1d68e22d99" />
+</p>
+
+---
+
+**Architecture**\
+
+<p align="center">
+  <img width="202" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
+</p>
+
+---
 
 **Development Phase**\
 The extension is currently open to development and welcomes feedback and new feature suggestions!
