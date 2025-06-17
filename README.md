@@ -29,4 +29,4 @@ For Firefox:
 **Development Phase**\
 The extension is currently open to development and welcomes feedback and new feature suggestions!
 
-_This prject is licensed under a Creative Commons License to know more, visti- https://creativecommons.org/licenses/by-nc/4.0/_
+_This project is licensed under a Creative Commons License to know more, visti- https://creativecommons.org/licenses/by-nc/4.0/_
