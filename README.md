@@ -21,10 +21,10 @@ For Chrome:
 3. Select the local LaTeXify-main folder
 
 For Firefox:
-1. Open manifest.json file, and change the version from 3 to 2, replace "action" with "browser_action", and remove unsupported keys like "scripting". This should be present in the coments, just feel free to uncomment. 
+1. Open manifest.json file, and change the version from 3 to 2, replace "action" with "browser_action", and remove unsupported keys like "scripting". This should be present in the coments, just feel free to uncomment.
 2. Vist about:debugging
-3. Click "Load Temporary Add-on"
-4. Select **just** your manifest.json the local LaTeXify-main folder
+3.  Click "Load Temporary Add-on"
+4.   Select **just** your manifest.json the local LaTeXify-main folder
 
 **Development Phase**\
 The extension is currently open to development and welcomes feedback and new feature suggestions!
