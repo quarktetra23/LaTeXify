@@ -6,23 +6,25 @@ LaTeXify is a web extension that is built for bother Firefox/Chrome. It serves a
 Typing an equation in latex takes a lot of time, especially when you mess something up and then document does not compile anymore. Latex isn't beginner friendly too. Instead of 
 looking for the correct latex syntax, this extension aims to save a lots of time by generating the latex code within moments. As an undergrad I have written a lot of standard mathematical expressions in an overleaf doc, going over to different tabs to find or generate the LaTeX code. I hope to save a lot of time with this extension. 
 
-**Running the extension**\
+**Running the extension**
 
 Instead of installing the extension conventioanlly, I have decided to set it up manually which should be equally easy (if nothing goes wrong). The reason for this being the extensions utilizes Open AI's API which requires a private key. I won't trust anyone with my API key, and I don't expect anyone to trust me too. Perhaps there is a way to handle API keys as a database convingly; if there is something like that, I would like to add that feature to this extension as well. 
 
+You can put in your private API key in async function callLLMAPI in background.js
+
+async function callLLMAPI(imageBase64) {
+    const OPENAI_API_KEY = 'sk-proj-xxx...'; // Replace with your real API key
+
 For Chrome: 
-1. Replace "" in with your private Open AI API key. 
-2. Visit chrome://extensions/
-3. Enable Developer mode
-4. Click “Load unpacked”
-5. Select the local LaTeXify-main folder
+1. Visit chrome://extensions/ and enable developer mode
+2. Click “Load unpacked”
+3. Select the local LaTeXify-main folder
 
 For Firefox:
-1.Replace "" in with your private Open AI API key. 
-2. Open manifest.json file, and change the version from 3 to 2, replace "action" with "browser_action", and remove unsupported keys like "scripting". This should be present in the coments, just feel free to uncomment. 
-3. Vist about:debugging
-4. Click "Load Temporary Add-on"
-5. Select **just** your manifest.json the local LaTeXify-main folder
+1. Open manifest.json file, and change the version from 3 to 2, replace "action" with "browser_action", and remove unsupported keys like "scripting". This should be present in the coments, just feel free to uncomment. 
+2. Vist about:debugging
+3. Click "Load Temporary Add-on"
+4. Select **just** your manifest.json the local LaTeXify-main folder
 
 **Development Phase**\
 The extension is currently open to development and welcomes feedback and new feature suggestions!
