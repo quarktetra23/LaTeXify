@@ -2,6 +2,8 @@
 **Overview**\
 LaTeXify is a web extension that is built for bother Firefox/Chrome. It serves a simple yet efficient purpose- You take a screenshot of the mathematical equation, which, if valid will return the LaTeX code which is ready to copied from the clipboard. For Mac users they key combination is Cmd+Shift+Y, anf for the Window users the combination is Ctrl+Shift+Y. I wanted to build a Safari version of this extension too- I started off with Firefox/Chrome You don't have to do a lot of extra work (afaik) as they both have similar web extension stadards.
 
+<img width="339" alt="Screenshot 2025-06-17 at 11 59 15" src="https://github.com/user-attachments/assets/60082085-d6c3-4384-b824-acdcfa3db3f4" />
+
 **Motivation**\
 Typing an equation in latex takes a lot of time, especially when you mess something up and then document does not compile anymore. Latex isn't beginner friendly too. Instead of 
 looking for the correct latex syntax, this extension aims to save a lots of time by generating the latex code within moments. As an undergrad I have written a lot of standard mathematical expressions in an overleaf doc, going over to different tabs to find or generate the LaTeX code. I hope to save a lot of time with this extension. 
@@ -22,7 +24,7 @@ For Chrome:
 
 For Firefox:
 1. Open manifest.json file, and change the version from 3 to 2, replace "action" with "browser_action", and remove unsupported keys like "scripting". This should be present in the coments, just feel free to uncomment.
-2. Vist about:debugging
+2. Vist bout:debugging#/runtime/this-firefox
 3.  Click "Load Temporary Add-on"
 4.   Select **just** your manifest.json the local LaTeXify-main folder
 
