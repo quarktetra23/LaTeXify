@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="202" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
+  <img width="160" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
 </p>
 
 <h1 align="center">LaTeXify</h1>
