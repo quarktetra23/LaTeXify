@@ -1,21 +1,49 @@
+<p align="center">
+  <img width="404" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
+</p>
 
-**Overview**\
-LaTeXify is a web extension that is built for bother Firefox/Chrome. It serves a simple yet efficient purpose- You take a screenshot of the mathematical equation, which, if valid will return the LaTeX code which is ready to copied from the clipboard. For Mac users they key combination is Cmd+Shift+Y, anf for the Window users the combination is Ctrl+Shift+Y. I wanted to build a Safari version of this extension too- I started off with Firefox/Chrome You don't have to do a lot of extra work (afaik) as they both have similar web extension stadards.
+<h1 align="center">LaTeXify</h1>
 
-<img width="339" alt="Screenshot 2025-06-17 at 11 59 15" src="https://github.com/user-attachments/assets/60082085-d6c3-4384-b824-acdcfa3db3f4" />
+---
 
-**Motivation**\
-Typing an equation in latex takes a lot of time, especially when you mess something up and then document does not compile anymore. Latex isn't beginner friendly too. Instead of 
-looking for the correct latex syntax, this extension aims to save a lots of time by generating the latex code within moments. As an undergrad I have written a lot of standard mathematical expressions in an overleaf doc, going over to different tabs to find or generate the LaTeX code. I hope to save a lot of time with this extension. 
+## Overview
 
-**Running the extension**
+LaTeXify is a browser extension built for both **Firefox** and **Chrome**. It serves a simple but efficient purpose—take a screenshot of a mathematical equation, and if it’s valid, LaTeX code is instantly generated and copied to your clipboard.
 
-Instead of installing the extension conventioanlly, I have decided to set it up manually which should be equally easy (if nothing goes wrong). The reason for this being the extensions utilizes Open AI's API which requires a private key. I won't trust anyone with my API key, and I don't expect anyone to trust me too. Perhaps there is a way to handle API keys as a database convingly; if there is something like that, I would like to add that feature to this extension as well. 
+- Mac users: **Cmd+Shift+Y**  
+- Windows users: **Ctrl+Shift+Y**
 
-You can put in your private API key in async function callLLMAPI in background.js
+I plan to support Safari too, as its extension model is now more aligned with Chrome/Firefox.
 
+---
+
+## Motivation
+
+Typing equations in LaTeX can be time-consuming—especially when minor syntax errors prevent compilation. LaTeX isn’t always beginner-friendly either. Instead of switching tabs or Googling syntax, this extension helps save time by generating LaTeX within moments.
+
+As an undergrad who’s spent hours writing equations in Overleaf, this tool is something I always wished existed.
+
+<p align="center">
+  <img width="339" alt="Screenshot 2025-06-17 at 11 59 15" src="https://github.com/user-attachments/assets/60082085-d6c3-4384-b824-acdcfa3db3f4" />
+</p>
+
+---
+
+## Running the Extension
+
+Instead of publishing the extension on a store, I’ve opted for manual installation. This is because the extension uses OpenAI's API, which requires a private key.
+
+> If there's a secure way to handle API keys (e.g., via a backend or encrypted vault), I’d love to integrate that in the future.
+
+To set your API key, open `background.js` and update this section:
+
+```js
 async function callLLMAPI(imageBase64) {
-    const OPENAI_API_KEY = 'sk-proj-xxx...'; // Replace with your real API key
+  const OPENAI_API_KEY = 'sk-proj-xxx...'; // Replace with your real API key
+  ...
+}
+```
+
 
 For Chrome: 
 1. Visit chrome://extensions/ and enable developer mode
