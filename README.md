@@ -58,18 +58,9 @@ For Firefox:
 <p align="center">
   <img width="1440" alt="Screenshot 2025-06-17 at 12 18 27" src="https://github.com/user-attachments/assets/598cf03c-0cba-4d0a-97f9-ce1d68e22d99" />
 </p>
-
 ---
 
-**Architecture**\
-
-<p align="center">
-  <img width="202" alt="Screenshot 2025-06-17 at 12 08 13" src="https://github.com/user-attachments/assets/c4efbcfb-7af4-4043-93a4-7483ee52e002" />
-</p>
-
----
-
-**Development Phase**\
+## Development Phase
 The extension is currently open to development and welcomes feedback and new feature suggestions!
 
 _This project is licensed under a Creative Commons License to know more, visti- https://creativecommons.org/licenses/by-nc/4.0/_
